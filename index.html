@@ -1,4 +1,7 @@
-html_code_responsive = """
+# Verificar visualmente o código anterior para identificar se há textos aparecendo indevidamente
+# Regerar um HTML limpo baseado no último com melhorias visuais
+
+html_fixed = """
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,10 +9,18 @@ html_code_responsive = """
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Consultoria Internacional</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
       margin: 0;
-      background: #f8f9fa;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
       font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
     }
 
     .header {
@@ -21,12 +32,7 @@ html_code_responsive = """
 
     .header img {
       width: 120px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100vh;
-      border: none;
+      height: auto;
     }
 
     @media (max-width: 768px) {
@@ -39,6 +45,15 @@ html_code_responsive = """
         width: 80px;
       }
     }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
   </style>
 </head>
 <body>
@@ -46,7 +61,7 @@ html_code_responsive = """
     <img src="logo-vendas.png" alt="Logo">
   </div>
 
-  <iframe id="typeform-full" src="https://form.typeform.com/to/PZTRlLxT"></iframe>
+  <iframe src="https://form.typeform.com/to/PZTRlLxT" id="typeform-full"></iframe>
 
   <script>
     window.addEventListener("message", function (e) {
@@ -59,9 +74,9 @@ html_code_responsive = """
 </html>
 """
 
-# Salvar como arquivo HTML
-file_path = "/mnt/data/typeform_responsive_logo_mobile.html"
-with open(file_path, "w", encoding="utf-8") as f:
-    f.write(html_code_responsive)
+# Salvar o HTML ajustado com layout limpo
+file_path_fixed = "/mnt/data/typeform_clean_fixed.html"
+with open(file_path_fixed, "w", encoding="utf-8") as f:
+    f.write(html_fixed)
 
-file_path
+file_path_fixed
