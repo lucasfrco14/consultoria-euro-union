@@ -9,28 +9,31 @@
       margin: 0;
       background: #f8f9fa;
       font-family: Arial, sans-serif;
-      position: relative;
     }
-    .watermark {
+
+    .header {
       position: fixed;
       top: 20px;
       left: 20px;
-      width: 140px;
-      opacity: 0.08;
-      z-index: 0;
+      z-index: 10;
     }
+
+    .header img {
+      width: 120px;
+    }
+
     iframe {
       width: 100%;
       height: 100vh;
       border: none;
-      z-index: 1;
-      position: relative;
     }
   </style>
 </head>
 <body>
-  <img class="watermark" src="logo-vendas.png" alt="Logo Marca d'Água">
-  
+  <div class="header">
+    <img src="logo-vendas.png" alt="Logo">
+  </div>
+
   <iframe id="typeform-full" src="https://form.typeform.com/to/PZTRlLxT"></iframe>
 
   <script>
