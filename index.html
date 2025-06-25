@@ -38,7 +38,7 @@
       }
 
       .header img {
-        width: 80px;
+        width: 65px; /* menor que antes */
       }
     }
 
@@ -62,7 +62,8 @@
   <script>
     window.addEventListener("message", function (e) {
       if (e.data.type === "form-submit") {
-        window.location.href = "https://calendly.com/thiagotenista_rj/sociedade-euro-union-sessao-estrategica?month=2025-06&date=2025-06-25";
+        // Link sem parâmetro de data fixa, para abrir calendário
+        window.location.href = "https://calendly.com/thiagotenista_rj/sociedade-euro-union-sessao-estrategica";
       }
     });
   </script>
