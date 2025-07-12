@@ -2,38 +2,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Obrigado!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obrigado - Operação Europa</title>
   <style>
-    body {
-      margin: 0; padding: 0;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+      background: url('WhatsApp%20Image%202025-07-12%20at%2010.19.21.jpeg') no-repeat center center fixed;
+      background-size: cover;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      background-color: #f4f4f4;
-      font-family: Arial, sans-serif;
-      text-align: center;
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    video {
+
+    .video-container {
       max-width: 90%;
-      height: auto;
+      width: 800px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .video-container {
+        width: 95%;
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Obrigado por agendar! Assista essa mensagem antes da sessão 👇</h1>
-  <video controls>
-    <source src="video-boas-vindas.mp4" type="video/mp4">
-    Seu navegador não suporta a exibição de vídeos.
-  </video>
+  <div class="video-container">
+    <video controls autoplay>
+      <source src="video.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeo HTML5.
+    </video>
+  </div>
 </body>
 </html>
