@@ -3,55 +3,63 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Obrigado - Operação Europa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Obrigado!</title>
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
     html, body {
-      height: 100%;
+      margin: 0;
+      padding: 0;
       width: 100%;
+      height: 100%;
       font-family: Arial, sans-serif;
-      background: url('WhatsApp%20Image%202025-07-12%20at%2010.19.21.jpeg') no-repeat center center fixed;
+      background: url("background.jpg") no-repeat center center fixed;
       background-size: cover;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
     }
 
-    .video-container {
-      max-width: 90%;
-      width: 800px;
-      background-color: rgba(0, 0, 0, 0.7);
+    .message {
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      max-width: 90%;
     }
 
     video {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
+      width: 90%;
+      max-width: 720px;
+      border-radius: 10px;
     }
 
     @media (max-width: 768px) {
-      .video-container {
+      .message {
+        font-size: 16px;
+      }
+      video {
         width: 95%;
-        padding: 10px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="video-container">
-    <video controls autoplay>
-      <source src="video-boas-vindas.mp4" type="video/mp4" />
-      Seu navegador não suporta vídeo HTML5.
-    </video>
+  <div class="message">
+    <h2>Obrigado!</h2>
+    <p>Antes da nossa reunião assista agora o vídeo abaixo</p>
   </div>
+  
+  <video controls autoplay muted playsinline>
+    <source src="video-boas-vindas.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo HTML5.
+  </video>
 </body>
 </html>
+
