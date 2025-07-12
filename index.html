@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,50 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Operação Europa</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
+      margin: 0; padding: 0;
+      width: 100%; height: 100%;
       overflow: hidden;
       font-family: Arial, sans-serif;
       background-color: #f8f9fa;
     }
-
     .header {
       position: fixed;
-      top: 40px;
-      left: 40px;
+      top: 40px; left: 40px;
       z-index: 10;
     }
-
     .header img {
-      width: 120px;
-      height: auto;
+      width: 120px; height: auto;
     }
-
     @media (max-width: 768px) {
-      .header {
-        top: 10px;
-        left: 10px;
-      }
-
-      .header img {
-        width: 65px; /* menor que antes */
-      }
+      .header { top: 10px; left: 10px; }
+      .header img { width: 65px; }
     }
-
     iframe {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       border: none;
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
     }
   </style>
 </head>
@@ -62,8 +44,7 @@
   <script>
     window.addEventListener("message", function (e) {
       if (e.data.type === "form-submit") {
-        // Link sem parâmetro de data fixa, para abrir calendário
-        window.location.href = "https://calendly.com/thiagotenista_rj/operacao-europa";
+        window.location.href = "agendamento.html";
       }
     });
   </script>
